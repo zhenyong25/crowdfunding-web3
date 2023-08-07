@@ -11,6 +11,7 @@ module.exports = {
       },
     },
   },
+  defaultNetwork: 'sepolia',
   networks: {
     zksync_testnet: {
       url: "https://zksync2-testnet.zksync.dev",
@@ -24,20 +25,29 @@ module.exports = {
       chainId: 324,
       zksync: true,
     },
+    hardhat:{
+    },
+    sepolia:{
+      url: "https://eth-sepolia.g.alchemy.com/v2/I29XPFCOz6V1jsG0S-QaxQlQbJLZP9DO",
+      accounts: ["d0c4058b8e0885834c2660e74188a8feef5e365f1cbe53c237c68e0803ad5cbb"]
+    }
   },
   paths: {
-    artifacts: "./artifacts-zk",
-    cache: "./cache-zk",
     sources: "./contracts",
     tests: "./test",
+    cache: "./cache",
+    artifacts: "./artifacts"
+  },
+  mocha: {
+    timeout: 40000
   },
   solidity: {
-    version: "0.8.17",
+    version: "0.8.19",
     settings: {
       optimizer: {
         enabled: true,
-        runs: 200,
-      },
-    },
-  },
-};
+        runs: 200
+      }
+    }
+  }
+}
