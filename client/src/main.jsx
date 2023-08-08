@@ -10,8 +10,6 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// activeChain={{rpc:["https://eth-sepolia.g.alchemy.com/v2/I29XPFCOz6V1jsG0S-QaxQlQbJLZP9DO"]}
-
 root.render(
   <ThirdwebProvider activeChain={Sepolia} clientId="132d5086a89c4a10fa43d9dd22a0d6eb"> 
     <Router>
