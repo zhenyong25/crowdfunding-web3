@@ -7,6 +7,7 @@ import { logo, menu, search, thirdweb } from '../assets';
 import { navlinks } from '../constants';
 
 const Navbar = () => {
+
   const navigate = useNavigate();
 
   // REACT HOOKS 
@@ -29,6 +30,7 @@ const Navbar = () => {
 
       {/* CONNECT BUTTON */}
       <div className="sm:flex hidden flex-row justify-end gap-4">
+        
         <CustomButton 
           btnType="button"
           title={address ? 'Create a campaign' : 'Connect'}

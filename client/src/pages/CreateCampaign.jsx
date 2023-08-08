@@ -6,7 +6,7 @@ import { useStateContext } from '../context';
 import { money } from '../assets';
 import { CustomButton, FormField, Loader } from '../components';
 import { checkIfImage } from '../utils';
-
+ 
 const CreateCampaign = () => {
 
   const navigate = useNavigate();
@@ -34,11 +34,10 @@ const CreateCampaign = () => {
 
     checkIfImage(form.image, async (exists) => {
       if(exists) {
-        setIsLoading(true)
-        
+        setIsLoading(true); 
         await createCampaign({ ...form, target: ethers.utils.parseUnits(form.target, 18)})
         setIsLoading(false);
-        navigate('/');
+        navigate('/profile');
       } else {
         alert('Provide valid image URL')
         setForm({ ...form, image: '' });
