@@ -64,7 +64,9 @@ const Navbar = () => {
 
           <div className={`absolute top-[60px] right-0 left-0 bg-[#1c1c24] z-10 shadow-secondary py-4 ${!toggleDrawer ? '-translate-y-[100vh]' : 'translate-y-0'} transition-all duration-700`}>
             <ul className="mb-4">
+
               {navlinks.map((link) => (
+
                 <li
                   key={link.name}
                   className={`flex p-4 ${isActive === link.name && 'bg-[#3a3a43]'}`}
@@ -83,9 +85,11 @@ const Navbar = () => {
                     {link.name}
                   </p>
                 </li>
+
               ))}
             </ul>
-
+            
+            {/* CONNECT BUTTON  */}
             <div className="flex mx-4">
             <CustomButton 
               btnType="button"
@@ -99,6 +103,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+
     </div>
   )
 }
